@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<HTMl>
+    <!-- Header -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/HTMLFashion/CSS/style_login.css">
+        <title>Login</title>
+    </head>
+    <!-- Body -->
+    <body>
+        <!-- Background Auto Slideshow -->
+        <div class="slider-Container">
+            <div class="slide fade">
+                <img src="images/images.jpg" width="1480px" height="1000px">
+            </div>
+            <div class="slide fade">
+                <img src="images/original-art-kandinsky-style-abstract-art-hipsters-unisex-poly-cotton-t-shirt.jpg" width="1480px" height="1000px">
+            </div>
+            <div class="slide fade">
+                <img src="images/shoe.jpg" width="1480px" height="1000px">
+            </div>
+        </div>
+
+        <!-- Login -->
+        <form class="login" action="login.html" method="POST">    
+            <h1>Đăng Nhập</h1>
+            <input type="text" name="" placeholder="UserName">
+            <input type="password" name="" placeholder="Password">
+            <input type="submit" name="" value="Login">
+        </form>
+
+        <!-- Script auto slide show -->
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("slide");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              //for (i = 0; i < dots.length; i++) {
+              //  dots[i].className = dots[i].className.replace(" active", "");
+             // }
+              slides[slideIndex-1].style.display = "block";  
+              //dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+    </body>
+</HTMl>
